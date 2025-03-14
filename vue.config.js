@@ -2,6 +2,8 @@ const { defineConfig } = require('@vue/cli-service');
 const webpack = require('webpack');
 
 module.exports = defineConfig({
+  publicPath: '/ProjetoIntegradorSenac/', // Adicione essa linha
+  
   configureWebpack: {
     resolve: {
       fallback: {
@@ -14,7 +16,6 @@ module.exports = defineConfig({
       },
     },
     plugins: [
-      // Define o objeto global `process`
       new webpack.ProvidePlugin({
         process: 'process/browser',
       }),
