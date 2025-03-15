@@ -21,6 +21,12 @@ const routes = [
     component: HomePage, // Rota para a página inicial
   },
   {
+    path: '/ProjetoIntegradorSenac/', // Garante que essa rota existe
+    name: 'ProjetoIntegrador',
+    component: HomePage, // Troque pelo componente correto
+  },
+  
+  {
     path: '/login',
     name: 'Login',
     component: LoginComponent, // Rota para o login de moradores
