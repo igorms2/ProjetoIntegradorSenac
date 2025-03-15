@@ -2,8 +2,7 @@ const { defineConfig } = require('@vue/cli-service');
 const webpack = require('webpack');
 
 module.exports = defineConfig({
-  publicPath: '/ProjetoIntegradorSenac/', // Adicione essa linha
-  
+  publicPath: process.env.NODE_ENV === 'production' ? '/ProjetoIntegradorSenac/' : '/',
   configureWebpack: {
     resolve: {
       fallback: {
